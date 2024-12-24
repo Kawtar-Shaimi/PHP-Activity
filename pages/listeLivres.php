@@ -1,4 +1,5 @@
 <?php
+    require_once('../DB/database.php');
     session_start();
     $sql = "SELECT * FROM livres";
     $result = $conn->query($sql);
@@ -43,7 +44,6 @@
                 </table>
             </div> 
         </div>
-   
         </div>
     </div>
 </body>
