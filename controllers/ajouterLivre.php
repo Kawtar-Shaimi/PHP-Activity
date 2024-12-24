@@ -22,6 +22,7 @@
             $stmt->bind_param("sssss", $titre, $auteur, $date_ajout, $categorie, $disponible);
 
             $stmt->execute();
+            header("../pages/listeLivres.php");
 
             $stmt->close();
             $conn->close();

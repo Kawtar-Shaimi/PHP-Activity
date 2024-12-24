@@ -1,0 +1,10 @@
+------ fetch_assoc ------
+fetch_assoc renvoie une ligne du résultat sous forme de tableau associatif, où les clés sont les noms des colonnes de la table.
+
+------fetch_row -------
+fetch_row renvoie une ligne du résultat sous forme de tableau indexé numériquement, où les clés sont des indices (0, 1, 2, ...).
+
+------fetch_array() -------
+Récupérer une ligne sous forme de tableau associatif ou numérique.
+
+
