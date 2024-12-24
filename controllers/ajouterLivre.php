@@ -18,7 +18,7 @@
                     $error = "error";
                 }
     
-                $stmt->bind_param("sssss", $titre, $auteur, $date_ajout, $categorie, $disponible);
+                $stmt->bind_param("sssss", $titre, $auteur, $categorie, $date_ajout,  $disponible);
     
                 $stmt->execute();
     
