@@ -5,8 +5,10 @@
         $titre = trim($_POST['titre']);
         $auteur = trim($_POST['auteur']);
         $categorie = trim($_POST['categorie']);
-        $date_ajout = trim($_POST['date_ajout']);
-        $disponible = trim($_POST['disponible']);
+        $date_ajout = $_POST['date_ajout'];
+        $disponible = $_POST['disponible']; 
+       
+
         $isValid = true;
 
         if($isValid){
@@ -18,7 +20,7 @@
                     $error = "error";
                 }
     
-                $stmt->bind_param("sssss", $titre, $auteur, $categorie, $date_ajout,  $disponible);
+                $stmt->bind_param("ssssi", $titre, $auteur, $categorie, $date_ajout,  $disponible);
     
                 $stmt->execute();
     

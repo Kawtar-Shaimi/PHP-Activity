@@ -7,4 +7,18 @@ fetch_row renvoie une ligne du résultat sous forme de tableau indexé numériqu
 ------fetch_array() -------
 Récupérer une ligne sous forme de tableau associatif ou numérique.
 
+------ $_SERVER -------
+The $_SERVER superglobal contains information about the server environment and the current request.
+ It is an associative array that holds details like headers, paths, and script locations.
 
+
+------ $_SESSION -------
+ The $_SESSION superglobal is used to store session variables.
+ These variables are stored on the server and are persistent across page requests for the same user.
+
+
+
+
+------$_POST -------
+ The $_POST superglobal is used to collect data submitted via POST requests, usually from HTML forms.
+ It stores form input values when the form's method="POST" is specified.

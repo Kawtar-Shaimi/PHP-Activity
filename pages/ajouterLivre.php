@@ -9,6 +9,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
+            <link rel="stylesheet" href="./styles.css">
             <script src="https://cdn.tailwindcss.com"></script>
         </head>
         <body>
@@ -16,20 +17,47 @@
                 <div class="w-full min-h-[90vh] bg-FormBg bg-cover bg-center flex justify-center items-center bg-no-repeat">
                     <fieldset class="flex justify-center items-center w-4/5">
                         <div class="w-[90%] lg:w-[50%]" >
-                            <p class="bg-yellow-100 mt-5 rounded text-center text-xl font-bold py-2 text-green-900 ">Ajouter Livre</p>
-                            <form class="flex flex-col justify-center pl-10 bg-green-700 h-96 rounded-md shadow-xl" action="../controllers/ajouterLivre.php" method="post">
-                                <label class="text-yellow-100">Titre :</label>
-                                <input class="w-[80%] bg-yellow-50 rounded focus:outline-none focus:border-transparent" type="text" name="titre"><br>
-                                <label class="text-yellow-100">Auteur :</label>
-                                <input class="w-[80%] bg-yellow-50 rounded focus:outline-none focus:border-transparent" type="text" name="auteur"><br>
-                                <label class="text-yellow-100">Categorie :</label>
-                                <input class="w-[80%] bg-yellow-50 rounded focus:outline-none focus:border-transparent" type="text" name="categorie"><br>
-                                <label class="text-yellow-100">Date d'ajout :</label>
-                                <input class="w-[80%] bg-yellow-50 rounded focus:outline-none focus:border-transparent" type="date" name="date_ajout"><br>
-                                <label class="text-yellow-100">Disponible :</label>
-                                <input class="w-[80%] bg-yellow-50 rounded focus:outline-none focus:border-transparent" type="text" name="disponible"><br>
-                                <button class="bg-yellow-100 w-24 py-1 rounded text-sm lg:text-[15px]">Ajouter</button>
-                            </form>
+                    
+                        <div class="library-container">
+      <form method="post"  action="../controllers/ajouterLivre.php"  class="add-book-form">
+        <h2 class="form-title">Ajouter un nouveau livre</h2>
+        <div class="form-grid">
+            <div class="form-group">
+                <label class="form-label">Titre</label>
+                <input name="titre" type="text" class="form-input">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Auteur</label>
+                <input name="auteur" type="text" class="form-input">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Catégorie</label>
+                <select name="categorie" class="form-select">
+                    <option value="" disapled selected>Sélectionner une catégorie</option>
+                    <option value="Roman">Roman</option>
+                    <option value="Littérature">Littérature</option>
+                    <option value="Conte">Conte</option>
+                    <option value="Poésie">Poésie</option>
+                    <option value="Science">Science</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Date d'ajout</label>
+                <input name="date_ajout" type="date" class="form-input">
+            </div>
+        </div>
+        <div class="form-group"></div>
+        <label class="form-label">Disponiblity</label>
+                <select name="disponible" class="form-select">
+                    <option value="" disapled selected>Sélectionner dispo</option>
+                    <option value="1">Disponible</option>
+                    <option value="2">Indisponible</option>
+                    
+                </select>
+</div>
+        <button name="addlivre" type="submit" class="submit-btn">Ajouter le livre</button>
+    </form>
+    </div>
                         </div>         
                     </fieldset>
                 </div>
